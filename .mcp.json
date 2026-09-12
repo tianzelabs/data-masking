@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fpe-mask": {
+      "command": "/Users/tianzewang/data-masking/.venv/bin/python3",
+      "args": ["-m", "mcp_server"],
+      "cwd": "/Users/tianzewang/data-masking",
+      "env": {
+        "FPE_MASK_MODE": "standard"
+      }
+    }
+  }
+}

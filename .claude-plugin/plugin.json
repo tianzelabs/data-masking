@@ -1,0 +1,15 @@
+{
+  "name": "fpe-mask",
+  "version": "0.1.0",
+  "description": "Format-preserving masking layer for agent data access: structure- and character-class-aware FPE (Hungarian-aware) exposed as MCP tools.",
+  "mcpServers": {
+    "fpe-mask": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/.venv/bin/python3",
+      "args": ["-m", "mcp_server"],
+      "cwd": "${CLAUDE_PLUGIN_ROOT}",
+      "env": {
+        "FPE_MASK_MODE": "standard"
+      }
+    }
+  }
+}

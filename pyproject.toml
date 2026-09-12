@@ -1,0 +1,24 @@
+[project]
+name = "fpe-mask"
+version = "0.1.0"
+description = "Structure-aware format-preserving masking layer for agent/data pipelines (Claude Code plugin)"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography>=42.0",
+    "mcp>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pandas>=2.0", "polars>=1.0"]
+pandas = ["pandas>=2.0"]
+polars = ["polars>=1.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["fpe_mask", "fpe_mask.*", "mcp_server*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
